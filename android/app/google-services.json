@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1024066824056",
+    "project_id": "saffronedgetest",
+    "storage_bucket": "saffronedgetest.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1024066824056:android:65e601eac88195c5c54a8d",
+        "android_client_info": {
+          "package_name": "com.example.saffronedgetest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDswWev6AKItFjvj_NRjOdNjQ3U8iL0F98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
