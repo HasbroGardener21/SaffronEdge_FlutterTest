@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        ANDROID_HOME = 'C:\\Users\\harsh\\AppData\\Local\\Android\\Sdk'
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -22,9 +26,6 @@ pipeline {
     }
     
     post {
-        always {
-            echo 'Pipeline execution complete.'
-        }
         success {
             echo 'Build successful!'
         }
