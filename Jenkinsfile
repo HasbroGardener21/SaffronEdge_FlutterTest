@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         ANDROID_HOME = 'C:\\Users\\harsh\\AppData\\Local\\Android\\Sdk'
+        JAVA_HOME = 'C:\Program Files\Eclipse Adoptium\jdk-21.0.12.101-hotspot'
     }
 
     stages {
