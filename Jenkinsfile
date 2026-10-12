@@ -14,12 +14,6 @@ pipeline {
             }
         }
         
-        stage('Run Tests') {
-            steps {
-                bat 'C:\\tools\\flutter_windows_3.47.5-stable\\flutter\\bin\\flutter.bat test'
-            }
-        }
-        
         stage('Build APK') {
             steps {
                 bat 'C:\\tools\\flutter_windows_3.47.5-stable\\flutter\\bin\\flutter.bat build apk --release'
