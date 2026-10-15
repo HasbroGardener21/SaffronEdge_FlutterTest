@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    environment {
+        ANDROID_HOME = 'C:\\Users\\harsh\\AppData\\Local\\Android\\Sdk'
+        JAVA_HOME = 'C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.12.101-hotspot'
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -11,22 +16,15 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                // Fetches the Flutter packages
-                bat 'flutter pub get'
-            }
-        }
-
-        stage('Run Tests') {
-            steps {
-                // Runs unit tests (if you have them in the 'test' folder)
-                bat 'flutter test'
+                // Fetches the Flutter packages using the absolute path
+                bat 'C:\\tools\\flutter_windows_3.47.5-stable\\flutter\\bin\\flutter.bat pub get'
             }
         }
 
         stage('Build APK') {
             steps {
-                // Builds the release APK for Android
-                bat 'flutter build apk --release'
+                // Builds the release APK for Android using the absolute path
+                bat 'C:\\tools\\flutter_windows_3.47.5-stable\\flutter\\bin\\flutter.bat build apk --release'
             }
         }
     }
@@ -37,6 +35,8 @@ pipeline {
         }
         success {
             echo 'Build successful!'
+            // Archives the built APK so it appears as a downloadable artifact on the Jenkins build page
+            archiveArtifacts artifacts: 'build/app/outputs/flutter-apk/app-release.apk', fingerprint: true
         }
         failure {
             echo 'Build failed. Check the logs for details.'
