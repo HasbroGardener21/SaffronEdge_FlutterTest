@@ -12,11 +12,11 @@ class FocusLadderApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
-        scaffoldBackgroundColor: const Color(0xFF000000), // True OLED Black
+        scaffoldBackgroundColor: const Color(0xFF000000),
         colorScheme: const ColorScheme.dark(
-          primary: Color(0xFF00E5FF),    // Neon Cyber Cyan for Work
-          secondary: Color(0xFF00E676),  // Neon Mint Green for Rest
-          surface: Color(0xFF121212),    // Dark Charcoal Cards
+          primary: Color(0xFF00E5FF),
+          secondary: Color(0xFF00E676),
+          surface: Color(0xFF121212),
           onSurface: Color(0xFFE0E0E0),
         ),
         fontFamily: 'monospace', // Crisp technical font feel for numbers
